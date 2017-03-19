@@ -1,0 +1,39 @@
+{
+  "name": "c2v",
+  "version": "1.0.0",
+  "description": "Cities to visit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "C2V"
+  },
+  "keywords": [
+    "Cities",
+    "to",
+    "visit"
+  ],
+  "author": "Tom Anderson",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-mocks": "^1.6.3",
+    "browserify": "^14.1.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-requirejs": "^1.1.0",
+    "ng-toast": "^2.0.0",
+    "requirejs": "^2.3.3"
+  }
+}
