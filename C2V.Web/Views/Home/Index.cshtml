@@ -2,10 +2,21 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="~/dist/css/default.css" />
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Cities 2 Visit</title>
 </head>
-<body>
+<body ng-app="app">
     <h1>Cities 2 Visit</h1>
+    <cities-component></cities-component>
+    <script type="text/javascript">
+
+        config = {};
+
+        config.baseUri = window.location.href + 'api/';
+
+    </script>
+    <script src="~/dist/js/bundle.js"></script>
+    <script src="~/dist/js/app-bundle.js"></script>
 </body>
 </html>

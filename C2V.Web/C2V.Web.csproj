@@ -6,8 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\app.js" />
+    <Content Include="wwwroot\app\components\cities.component.js" />
+    <Content Include="wwwroot\app\components\cities.template.html" />
+    <Content Include="wwwroot\app\services\cities.service.js" />
+    <Content Include="wwwroot\dist\css\default.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Views\Home\" />
-    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\dist\js\" />
+    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />

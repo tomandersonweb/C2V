@@ -1,0 +1,50 @@
+﻿<p class="text-right">
+    <button class="btn btn-default" ng-model="model.showAddCity" ng-click="model.showAddCity === false ? model.showAddCity = true : model.showAddCity = false"><span class="glyphicon glyphicon-plus"></span> Add New City</button>
+</p>
+<p>{{model.visitedCount}} Visited / {{model.cities.length - model.visitedCount}} Unvisited</p>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th class="col-md-3">City</th>
+            <th class="col-md-2">Country</th>
+            <th class="col-md-3">Attractions</th>
+            <th class="col-md-2">Visited</th>
+            <th class="col-md-2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-show="model.showAddCity" class="success">
+            <td><input class="form-control" type="text" placeholder="City name" ng-model="model.newCity.city" /></td>
+            <td><input class="form-control" type="text" placeholder="Country" ng-model="model.newCity.country" /></td>
+            <td>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Attractions" ng-model="model.newCityAttraction">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="model.newCity.attractions.push(model.newCityAttraction)">Add</button>
+                    </span>
+                </div>
+                <ul>
+                    <li ng-repeat="attraction in model.newCity.attractions">{{attraction}}</li>
+                </ul>
+            </td>
+            <td></td>
+            <td><button class="btn btn-default" ng-click="model.addCity(model.newCity)"><span class="glyphicon glyphicon-save"></span> Save</button>
+        </tr>
+        <tr ng-repeat="city in model.cities ">
+            <td>{{city.city}}</td>
+            <td>{{city.country}}</td>
+            <td>
+                <ul>
+                    <li ng-repeat="attraction in city.attractions">{{attraction}}</li>
+                </ul>
+            </td>
+            <td>
+                <span class="glyphicon glyphicon-ok" ng-class="{'glyphicon glyphicon-checked': city.visited === true, 'glyphicon glyphicon-unchecked': city.visited===false}"></span>
+            </td>
+            <td>
+                <button class="btn btn-default" ng-click="model.setVisitedStatus(city)">Set <span ng-show="city.visited">Not</span> Visited</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
