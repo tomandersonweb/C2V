@@ -12,7 +12,8 @@ namespace C2V.Web.ViewModels
     {
         public CityViewModel(City city)
         {
-            this.InjectFrom(city);
+            if (city != null)
+                this.InjectFrom(city);
         }
 
         [Required]

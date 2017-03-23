@@ -33,4 +33,15 @@ gulp.task('bundle-app', function () {
         .pipe(gulp.dest(jsDestination));
 });
 
-gulp.task('default', ['browserify', 'bundle-app']);
+var jsLibSource = 'wwwroot/lib/**/*.js';
+
+gulp.task('bundle-lib', function () {
+    return gulp.src([jsLibSource, jsSourceExclude])
+        .pipe(concat('lib-bundle.js'))
+        .pipe(gulp.dest(jsDestination))
+        .pipe(rename('lib-bundle.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(jsDestination));
+});
+
+gulp.task('default', ['browserify', 'bundle-app', 'bundle-lib']);

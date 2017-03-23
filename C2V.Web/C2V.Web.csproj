@@ -6,17 +6,43 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\lib\css\**" />
+    <Content Remove="wwwroot\lib\css\**" />
+    <EmbeddedResource Remove="wwwroot\lib\css\**" />
+    <None Remove="wwwroot\lib\css\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="wwwroot\app.js" />
     <Content Include="wwwroot\app\components\cities.component.js" />
     <Content Include="wwwroot\app\components\cities.template.html" />
     <Content Include="wwwroot\app\services\cities.service.js" />
     <Content Include="wwwroot\dist\css\default.css" />
+    <Content Include="wwwroot\lib\bootstrap.js" />
+    <Content Include="wwwroot\lib\bootstrap.min.js" />
+    <Content Include="wwwroot\lib\css\bootstrap-theme.css" />
+    <Content Include="wwwroot\lib\css\bootstrap-theme.min.css" />
+    <Content Include="wwwroot\lib\css\bootstrap.css" />
+    <Content Include="wwwroot\lib\css\bootstrap.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="wwwroot\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="wwwroot\lib\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\lib\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\lib\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\lib\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\lib\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\lib\css\ngToast-animations.css" />
+    <Content Include="wwwroot\lib\css\ngToast-animations.min.css" />
+    <Content Include="wwwroot\lib\css\ngToast.css" />
+    <Content Include="wwwroot\lib\css\ngToast.min.css" />
+    <Content Include="wwwroot\lib\js\angular-sanitize.min.js" />
+    <Content Include="wwwroot\lib\js\bootstrap.js" />
+    <Content Include="wwwroot\lib\js\bootstrap.min.js" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Views\Home\" />
     <Folder Include="wwwroot\dist\js\" />
-    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
@@ -33,6 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\lib\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\lib\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\lib\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\js\ngToast.js" />
+    <None Include="wwwroot\lib\js\ngToast.min.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\C2V.Domain\C2V.Domain.csproj" />

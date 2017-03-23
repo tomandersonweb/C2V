@@ -5,10 +5,10 @@
     module.component("citiesComponent", {
         templateUrl: "/app/components/cities.template.html",
         controllerAs: "model",
-        controller: ["citiesService", controller]
+        controller: ["citiesService", "ngToast", controller]
     });
 
-    function controller(citiesService) {
+    function controller(citiesService, ngToast) {
 
         var model = this;
         model.cities = [];
@@ -31,7 +31,7 @@
                     model.cities = response;
                 })
                 .catch(function (error) {
-                    //ngToast.danger(error);
+                    ngToast.danger(error);
                 });
         };
 
@@ -41,7 +41,7 @@
                     model.setup();
                 })
                 .catch(function (error) {
-                    //ngToast.danger(error);
+                    ngToast.danger(error);
                 });
         };
 
@@ -51,18 +51,18 @@
                     model.visitedCount = response;
                 })
                 .catch(function (error) {
-                    //ngToast.danger(error);
+                    ngToast.danger(error);
                 });
         };
 
         model.setVisitedStatus = function (city) {
             city.visited = !city.visited;
-            citiesService.editCity(city.city, city)
+            citiesService.editCity(city.name, city)
                 .then(function (response) {
                     model.setup();
                 })
                 .catch(function (error) {
-                    //ngToast.danger(error);
+                    ngToast.danger(error);
                 });
         };
 

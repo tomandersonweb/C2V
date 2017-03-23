@@ -1,7 +1,7 @@
 ﻿(function () {
     var angular = require('angular');
 
-    var module = angular.module("app", []);
+    var module = angular.module("app", ["ngToast"]);
 
     module.config(function ($locationProvider) {
 

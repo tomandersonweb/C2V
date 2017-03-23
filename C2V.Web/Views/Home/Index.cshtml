@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-    <link rel="stylesheet" href="~/dist/css/default.css" />
-    <meta name="viewport" content="width=device-width" />
     <title>Cities 2 Visit</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/dist/css/default.css" />
+
+    <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/lib/css/ngToast.css" rel="stylesheet" />
+    <link href="~/lib/css/ngToast-animations.css" rel="stylesheet" />
 </head>
 <body ng-app="app">
-    <h1>Cities 2 Visit</h1>
-    <cities-component></cities-component>
+    <toast></toast>
+    <div class="container">
+        <h1>Cities 2 Visit</h1>
+        <cities-component></cities-component>
+    </div>
     <script type="text/javascript">
-
         config = {};
-
         config.baseUri = window.location.href + 'api/';
-
     </script>
     <script src="~/dist/js/bundle.js"></script>
-    <script src="~/dist/js/app-bundle.js"></script>
+    <script src="~/dist/js/app-bundle.min.js"></script>
+    <script src="~/lib/js/angular-sanitize.min.js"></script>
+    <script src="~/lib/js/bootstrap.min.js"></script>
+    <script src="~/lib/js/ngToast.min.js"></script>
 </body>
 </html>
